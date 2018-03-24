@@ -2,11 +2,6 @@ package com.example.vlada.musicplayer;
 
 import java.io.Serializable;
 
-/**
- * Created by vlada on 17-Mar-18.
- */
-
-
 
 public class Song implements Serializable {
 

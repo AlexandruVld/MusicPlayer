@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import java.util.List;
 
@@ -20,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final ListView listView = findViewById(R.id.list_item);
+        final ImageView backToSelection = findViewById(R.id.back_to_selection);
         musicDataStore.addFolder(new Folder());
 
+        // Creates Dialog box with options to populate ListView
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
         alertDialog.setTitle(R.string.add_music);
         alertDialog.setItems((R.array.add_by), new DialogInterface.OnClickListener(){
@@ -86,10 +89,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        backToSelection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent backToPlaylist = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(backToPlaylist);
+            }
+        });
+
     }
-
-
-
-
-
 }

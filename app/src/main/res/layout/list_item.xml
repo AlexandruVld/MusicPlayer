@@ -5,8 +5,14 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="@color/list_background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/play_icon_padding"
+        android:src="@drawable/play"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_gravity="center"
         android:textAlignment="center"
         android:textColor="@color/background"
         tools:text=""/>
@@ -47,6 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_gravity="center"
         android:textAlignment="center"
         android:textColor="@color/background"
         tools:text=""/>

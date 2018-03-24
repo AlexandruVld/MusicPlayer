@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by vlada on 17-Mar-18.
- */
+// Holds the data to be manipulated in the app
 
 public class MusicDataStore {
 

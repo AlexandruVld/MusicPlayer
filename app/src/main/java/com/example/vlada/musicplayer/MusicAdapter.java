@@ -10,9 +10,7 @@ import android.widget.TextView;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created by vlada on 17-Mar-18.
- */
+
 
 public class MusicAdapter extends ArrayAdapter<Song> {
 
@@ -54,6 +52,5 @@ public class MusicAdapter extends ArrayAdapter<Song> {
         for (int i=0; i<getCount(); i++) allItems.add(getItem(i));
         return allItems;
     }
-
 
 }

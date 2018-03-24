@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/cover"
@@ -16,6 +16,13 @@
         android:scaleType="centerCrop"
         android:layout_margin="@dimen/player_margin"
         android:src="@drawable/trance"/>
+
+    <ImageView
+        android:id="@+id/back_to_playlist"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/player_margin"
+        android:src="@drawable/back"/>
 
     <TextView
         android:id="@+id/track_name"

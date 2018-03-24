@@ -12,7 +12,7 @@ public class Folder extends ArrayList<Song> {
         this.add(new Song("Armin Van Buuren", "In and out of love", "Dance", "Imagine"));
         this.add(new Song("Armin Van Buuren", "This light between us", "Dance", "Mirage"));
         this.add(new Song("Armin Van Buuren", "Save my Night", "Dance","Intense"));
-        this.add(new Song("Tiesto", "Dance for life", "Trance","Elements OF Life"));
+        this.add(new Song("Tiesto", "Dance for life", "Trance","Elements Of Life"));
         this.add(new Song("Tiesto", "Traffic", "Trance","Just Be"));
     }
 }
