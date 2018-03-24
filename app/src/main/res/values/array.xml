@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="add_by">
+        <item name="artist">By Artist</item>
+        <item name="genre">By Genre</item>
+        <item name="album">By Album</item>
+    </array>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="player_margin">16dp</dimen>
+    <dimen name="play_button">80dp</dimen>
+    <dimen name="pass_back_track">60dp</dimen>
+    <dimen name="random_repeat_track">30dp</dimen>
+</resources>

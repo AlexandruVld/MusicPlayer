@@ -1,0 +1,37 @@
+package com.example.vlada.musicplayer;
+
+import java.io.Serializable;
+
+/**
+ * Created by vlada on 17-Mar-18.
+ */
+
+
+
+public class Song implements Serializable {
+
+    private String mArtist;
+    private String mTitle;
+    private String mGenre;
+    private String mAlbum;
+
+    public Song(String artist, String track, String genre, String album){
+        mArtist = artist;
+        mTitle = track;
+        mGenre = genre;
+        mAlbum = album;
+    }
+
+    public String getArtist(){
+        return mArtist;
+    }
+
+    public String getTitle(){
+        return mTitle;
+    }
+
+    public String getGenre() { return mGenre; }
+
+    public String getAlbum() {return mAlbum;}
+
+}
