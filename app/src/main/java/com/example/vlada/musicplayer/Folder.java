@@ -2,10 +2,7 @@ package com.example.vlada.musicplayer;
 
 import java.util.ArrayList;
 
-/**
- * Created by vlada on 17-Mar-18.
- */
-
+//The Arraylist with the songs info
 public class Folder extends ArrayList<Song> {
     public Folder() {
         this.add(new Song("Tiesto", "Addagio for Strings", "Trance","Just Be"));

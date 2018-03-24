@@ -13,6 +13,8 @@ import java.util.ArrayList;
 public class PlayerActivity extends AppCompatActivity{
 
     int songNo;
+    ArrayList<Song> songs;
+
     @Override
     public void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +25,10 @@ public class PlayerActivity extends AppCompatActivity{
         ImageView backToPlaylist = findViewById(R.id.back_to_playlist);
         //Gets the info from the ListView
         Bundle bundle = getIntent().getExtras();
-        final ArrayList<Song> songs = (ArrayList<Song>) bundle.getSerializable("Music");
+        songs = (ArrayList<Song>) bundle.getSerializable("Music");
         songNo = bundle.getInt("songNo");
         Song song = songs.get(songNo);
-        track.setText(song.getArtist() + " - " + song.getTitle() + " -- " + song.getAlbum());
+        track.setText(song.getSongString());
 
         // Goes to the next item in the ListView
         nextSong.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +37,7 @@ public class PlayerActivity extends AppCompatActivity{
                 songNo = songNo + 1;
                 if (songNo < songs.size()) {
                     Song song = songs.get(songNo);
-                    track.setText(song.getArtist() + " - " + song.getTitle() + " -- " + song.getAlbum());
+                    track.setText(song.getSongString());
                 } else {
                     songNo = songNo - 1;
                 }
@@ -49,7 +51,7 @@ public class PlayerActivity extends AppCompatActivity{
                 songNo = songNo - 1;
                 if (songNo >= 0) {
                     Song song = songs.get(songNo);
-                    track.setText(song.getArtist() + " - " + song.getTitle() + " -- " + song.getAlbum());
+                    track.setText(song.getSongString());
                 } else {
                     songNo = songNo + 1;
                 }
