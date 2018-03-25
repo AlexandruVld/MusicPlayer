@@ -41,59 +41,66 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView backToSelection = findViewById(R.id.back_to_selection);
+        ImageView option = findViewById(R.id.option);
         final ListView listView = findViewById(R.id.list_item);
         musicDataStore.addFolder(new Folder());
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
-        alertDialog.setTitle(R.string.add_music);
-        alertDialog.setItems((R.array.add_by), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case 0:
-                        final AlertDialog.Builder artistDialog = new AlertDialog.Builder(MainActivity.this);
-                        final List<String> artists = musicDataStore.getAllArtists();
-                        artistDialog.setTitle(R.string.select_artist);
-                        artistDialog.setItems(artists.toArray(new String[artists.size()]), new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                listView.setAdapter(new MusicAdapter(MainActivity.this,
-                                        musicDataStore.getMusicByArtist(artists.get(i))));
-                            }
-                        });
-                        artistDialog.show();
-                        break;
-                    case 1:
-                        AlertDialog.Builder genreDialog = new AlertDialog.Builder(MainActivity.this);
-                        final List<String> genre = musicDataStore.getAllGenre();
-                        genreDialog.setTitle(R.string.select_genre);
-                        genreDialog.setItems(genre.toArray(new String[genre.size()]), new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                listView.setAdapter(new MusicAdapter(MainActivity.this,
-                                        musicDataStore.getMusicByGenre(genre.get(i))));
-                            }
-                        });
-                        genreDialog.show();
-                        break;
-                    case 2:
-                        AlertDialog.Builder albumDialog = new AlertDialog.Builder(MainActivity.this);
-                        final List<String> album = musicDataStore.getAllAlbums();
-                        albumDialog.setTitle(R.string.select_album);
-                        albumDialog.setItems(album.toArray(new String[album.size()]), new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                listView.setAdapter(new MusicAdapter(MainActivity.this,
-                                        musicDataStore.getMusicByAlbum(album.get(i))));
-                            }
-                        });
-                        albumDialog.show();
-                        break;
-                    default:
-                        break;
-                }
+
+        // Creates Dialog box with options to populate ListView
+        option.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+                alertDialog.setTitle(R.string.add_music);
+                alertDialog.setItems((R.array.add_by), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                final AlertDialog.Builder artistDialog = new AlertDialog.Builder(MainActivity.this);
+                                final List<String> artists = musicDataStore.getAllArtists();
+                                artistDialog.setTitle(R.string.select_artist);
+                                artistDialog.setItems(artists.toArray(new String[artists.size()]), new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        listView.setAdapter(new MusicAdapter(MainActivity.this,
+                                                musicDataStore.getMusicByArtist(artists.get(i))));
+                                    }
+                                });
+                                artistDialog.show();
+                                break;
+                            case 1:
+                                AlertDialog.Builder genreDialog = new AlertDialog.Builder(MainActivity.this);
+                                final List<String> genre = musicDataStore.getAllGenre();
+                                genreDialog.setTitle(R.string.select_genre);
+                                genreDialog.setItems(genre.toArray(new String[genre.size()]), new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        listView.setAdapter(new MusicAdapter(MainActivity.this,
+                                                musicDataStore.getMusicByGenre(genre.get(i))));
+                                    }
+                                });
+                                genreDialog.show();
+                                break;
+                            case 2:
+                                AlertDialog.Builder albumDialog = new AlertDialog.Builder(MainActivity.this);
+                                final List<String> album = musicDataStore.getAllAlbums();
+                                albumDialog.setTitle(R.string.select_album);
+                                albumDialog.setItems(album.toArray(new String[album.size()]), new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        listView.setAdapter(new MusicAdapter(MainActivity.this,
+                                                musicDataStore.getMusicByAlbum(album.get(i))));
+                                    }
+                                });
+                                albumDialog.show();
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                });
+                alertDialog.show();
             }
         });
-        alertDialog.show();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -106,12 +113,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        backToSelection.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View view){
-                Intent backToSelection = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(backToSelection);
-            }
-        });
     }
 }

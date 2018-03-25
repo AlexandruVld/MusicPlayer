@@ -4,7 +4,6 @@
     <string name="select_artist">Select Artist</string>
     <string name="select_genre">Select Genre</string>
     <string name="select_album">Select Album</string>
-    <string name="artist_track">Artist &amp; Track</string>
     <string name="genre">Genre</string>
     <string name="album">Album</string>
 </resources>

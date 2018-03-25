@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/back_to_selection"
+        android:id="@+id/option"
         android:layout_width="@dimen/playlist_icons"
         android:layout_height="@dimen/playlist_icons"
         android:layout_gravity="end"
