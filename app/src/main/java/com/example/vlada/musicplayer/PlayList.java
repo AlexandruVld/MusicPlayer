@@ -3,10 +3,6 @@ package com.example.vlada.musicplayer;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created by vlada on 25-Mar-18.
- */
-
 
 class PlayList implements Serializable {
     int currentSongIndex = 0;
