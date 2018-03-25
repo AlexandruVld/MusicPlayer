@@ -2,7 +2,7 @@ package com.example.vlada.musicplayer;
 
 import java.io.Serializable;
 
-
+// Data container
 public class Song implements Serializable {
 
     private String mArtist;

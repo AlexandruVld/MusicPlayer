@@ -18,8 +18,8 @@ public class MusicDataStore {
         for(Song t: f) this.addTrack(t);
     }
 
-    public ArrayList<Song> getMusicByArtist(String artist) {
-        ArrayList<Song> tracksByArtist = new ArrayList<Song>();
+    public PlayList getMusicByArtist(String artist) {
+        PlayList tracksByArtist = new PlayList();
         for(Song t: musicStore) if (t.getArtist() == artist) tracksByArtist.add(t);
         return tracksByArtist;
     }
@@ -36,8 +36,8 @@ public class MusicDataStore {
         return new ArrayList<>(allAlbums);
     }
 
-    public ArrayList<Song> getMusicByAlbum(String album){
-        ArrayList<Song> tracksByAlbum = new ArrayList<Song>();
+    public PlayList getMusicByAlbum(String album){
+        PlayList tracksByAlbum = new PlayList();
         for(Song t: musicStore) if (t.getAlbum() == album) tracksByAlbum.add(t);
         return tracksByAlbum;
     }
@@ -48,8 +48,8 @@ public class MusicDataStore {
         return new ArrayList<>(sllGenre);
     }
 
-    public ArrayList<Song> getMusicByGenre(String genre){
-        ArrayList<Song> tracksByGenre = new ArrayList<Song>();
+    public PlayList getMusicByGenre(String genre){
+        PlayList tracksByGenre = new PlayList();
         for(Song t: musicStore) if(t.getGenre() == genre) tracksByGenre.add(t);
         return tracksByGenre;
     }

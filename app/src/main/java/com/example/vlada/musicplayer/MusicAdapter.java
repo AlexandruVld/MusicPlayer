@@ -7,15 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-
 
 
 public class MusicAdapter extends ArrayAdapter<Song> {
 
-    public MusicAdapter(Activity context, ArrayList<Song> music){
-        super (context,0, music);
+    public MusicAdapter(Activity context, PlayList playList){
+        super (context,0, playList.getSongs());
     }
 
     @Override
@@ -45,12 +42,11 @@ public class MusicAdapter extends ArrayAdapter<Song> {
         return listItemView;
     }
 
-    public class SongList extends ArrayList<Song> implements Serializable {}
-
-    public ArrayList<Song> getAllItems() {
-        SongList allItems = new SongList();
-        for (int i=0; i<getCount(); i++) allItems.add(getItem(i));
-        return allItems;
+    public PlayList getCurrentPlayList(int currentSong) {
+        PlayList playList = new PlayList();
+        for (int i=0; i<getCount(); i++) playList.add(getItem(i));
+        playList.currentSongIndex = currentSong;
+        return playList;
     }
 
 }
