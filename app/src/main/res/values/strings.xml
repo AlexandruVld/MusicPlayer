@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MusicStructureApp</string>
     <string name="add_music">Add music:</string>
+    <string name="player_title">Now Playing</string>
     <string name="select_artist">Select Artist</string>
     <string name="select_genre">Select Genre</string>
     <string name="select_album">Select Album</string>
