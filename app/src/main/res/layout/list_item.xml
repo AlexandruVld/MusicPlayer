@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="@dimen/play_icon_padding"
-        android:src="@drawable/play"/>
+        android:src="@drawable/ic_action_playback_play"
+        tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:layout_width="match_parent"

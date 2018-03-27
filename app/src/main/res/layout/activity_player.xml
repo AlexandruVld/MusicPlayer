@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/list_background">
@@ -15,14 +16,16 @@
         android:gravity="center_horizontal"
         android:scaleType="centerCrop"
         android:layout_margin="@dimen/player_margin"
-        android:src="@drawable/trance"/>
+        android:src="@drawable/trance"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/back_to_playlist"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/cover_picture"
+        android:layout_height="@dimen/cover_picture"
         android:layout_margin="@dimen/player_margin"
-        android:src="@drawable/back"/>
+        android:src="@drawable/ic_navigate_before"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/track_name"
@@ -32,7 +35,7 @@
         android:layout_margin="@dimen/player_margin"
         android:layout_below="@id/cover"
         android:textColor="@color/background"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_size"
         android:text=""/>
 
     <ImageView
@@ -41,7 +44,8 @@
         android:layout_height="@dimen/play_button"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/track_name"
-        android:src="@drawable/play"/>
+        android:src="@drawable/ic_action_playback_play"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/back_track"
@@ -52,7 +56,9 @@
         android:layout_marginLeft="@dimen/player_margin"
         android:layout_marginTop="@dimen/player_margin"
         android:layout_toLeftOf="@id/play"
-        android:src="@drawable/back_track"/>
+        android:layout_toStartOf="@id/play"
+        android:src="@drawable/ic_action_playback_prev"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/pass_track"
@@ -63,7 +69,9 @@
         android:layout_marginRight="@dimen/player_margin"
         android:layout_marginTop="@dimen/player_margin"
         android:layout_toRightOf="@id/play"
-        android:src="@drawable/pass_track"/>
+        android:layout_toEndOf="@id/play"
+        android:src="@drawable/ic_action_playback_next"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/random"
@@ -72,7 +80,9 @@
         android:layout_below="@id/play"
         android:layout_marginTop="@dimen/player_margin"
         android:layout_toLeftOf="@id/play"
-        android:src="@drawable/random"/>
+        android:layout_toStartOf="@id/play"
+        android:src="@drawable/ic_action_playback_schuffle"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/repeat"
@@ -81,7 +91,9 @@
         android:layout_below="@id/play"
         android:layout_marginTop="@dimen/player_margin"
         android:layout_toRightOf="@id/play"
-        android:src="@drawable/repeat"/>
+        android:layout_toEndOf="@id/play"
+        android:src="@drawable/ic_action_playback_repeat"
+        tools:ignore="ContentDescription" />
 
     </RelativeLayout>
 

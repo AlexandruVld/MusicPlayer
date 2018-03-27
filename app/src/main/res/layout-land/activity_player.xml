@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/list_background">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <RelativeLayout
@@ -20,14 +21,16 @@
                 android:layout_margin="@dimen/player_margin"
                 android:gravity="center_horizontal"
                 android:scaleType="centerCrop"
-                android:src="@drawable/trance" />
+                android:src="@drawable/trance"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/back_to_playlist"
                 android:layout_width="@dimen/back_icon"
                 android:layout_height="@dimen/back_icon"
                 android:layout_margin="@dimen/player_margin"
-                android:src="@drawable/back" />
+                android:src="@drawable/ic_navigate_before"
+                tools:ignore="ContentDescription" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -60,14 +63,17 @@
                     android:layout_height="@dimen/pass_back_track"
                     android:layout_margin="@dimen/player_margin"
                     android:gravity="center_horizontal"
-                    android:src="@drawable/back_track" />
+                    android:src="@drawable/ic_action_playback_prev"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:id="@+id/play"
                     android:layout_width="@dimen/play_button"
                     android:layout_height="@dimen/play_button"
                     android:layout_toRightOf="@id/back_track"
-                    android:src="@drawable/play" />
+                    android:layout_toEndOf="@id/back_track"
+                    android:src="@drawable/ic_action_playback_play"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:id="@+id/pass_track"
@@ -75,7 +81,9 @@
                     android:layout_height="@dimen/pass_back_track"
                     android:layout_margin="@dimen/player_margin"
                     android:layout_toRightOf="@id/play"
-                    android:src="@drawable/pass_track" />
+                    android:layout_toEndOf="@id/play"
+                    android:src="@drawable/ic_action_playback_next"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:id="@+id/random"
@@ -83,7 +91,9 @@
                     android:layout_height="@dimen/random_repeat_track"
                     android:layout_below="@id/play"
                     android:layout_toLeftOf="@id/play"
-                    android:src="@drawable/random" />
+                    android:layout_toStartOf="@id/play"
+                    android:src="@drawable/ic_action_playback_schuffle"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:id="@+id/repeat"
@@ -91,7 +101,9 @@
                     android:layout_height="@dimen/random_repeat_track"
                     android:layout_below="@id/play"
                     android:layout_toRightOf="@id/play"
-                    android:src="@drawable/repeat" />
+                    android:layout_toEndOf="@id/play"
+                    android:src="@drawable/ic_action_playback_repeat"
+                    tools:ignore="ContentDescription" />
             </RelativeLayout>
             </RelativeLayout>
 

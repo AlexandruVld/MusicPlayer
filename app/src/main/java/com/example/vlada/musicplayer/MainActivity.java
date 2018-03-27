@@ -7,10 +7,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-
+import android.widget.TextView;
 import java.util.List;
 
 
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView option = findViewById(R.id.option);
+        TextView option = findViewById(R.id.add_music_option);
         final ListView listView = findViewById(R.id.list_item);
         musicDataStore.addFolder(new Folder());
 

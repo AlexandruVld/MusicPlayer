@@ -29,6 +29,8 @@ public class Song implements Serializable {
 
     public String getAlbum() {return mAlbum;}
 
-    public String getSongString() {return getArtist() + " - " + getTitle() + " -- " + getAlbum();}
+    public String getSongString() {
+        return getArtist() + R.string.separator + getTitle() + R.string.separators + getAlbum();
+    }
 
 }
