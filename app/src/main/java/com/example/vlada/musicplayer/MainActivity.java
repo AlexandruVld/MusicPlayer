@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.playlist);
         TextView option = findViewById(R.id.add_music_option);
         final ListView listView = findViewById(R.id.list_item);
         musicDataStore.addFolder(new Folder());

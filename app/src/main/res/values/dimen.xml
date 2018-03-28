@@ -9,4 +9,5 @@
     <dimen name="playlist_icons">25dp</dimen>
     <dimen name="text_size">24sp</dimen>
     <dimen name="cover_picture">50dp</dimen>
+    <dimen name="cover_dimen">300dp</dimen>
 </resources>

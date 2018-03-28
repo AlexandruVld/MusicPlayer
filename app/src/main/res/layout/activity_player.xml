@@ -9,23 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/cover"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:scaleType="centerCrop"
-        android:layout_margin="@dimen/player_margin"
-        android:src="@drawable/trance"
-        tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cover_dimen"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/player_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/trance"
+            tools:ignore="ContentDescription" />
 
-    <ImageView
-        android:id="@+id/back_to_playlist"
-        android:layout_width="@dimen/cover_picture"
-        android:layout_height="@dimen/cover_picture"
-        android:layout_margin="@dimen/player_margin"
-        android:src="@drawable/ic_navigate_before"
-        tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/back_to_playlist"
+            android:layout_width="@dimen/cover_picture"
+            android:layout_height="@dimen/cover_picture"
+            android:layout_alignLeft="@id/cover"
+            android:layout_alignStart="@+id/cover"
+            android:layout_alignTop="@+id/cover"
+            android:src="@drawable/ic_navigate_before"
+            tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/track_name"

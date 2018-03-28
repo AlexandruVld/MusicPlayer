@@ -16,8 +16,8 @@ public class PlayerActivity extends AppCompatActivity{
     @Override
     public void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle(R.string.player_title);
         setContentView(R.layout.activity_player);
+        setTitle(R.string.now_playing);
         final TextView track = findViewById(R.id.track_name);
         final ImageView nextSong = findViewById(R.id.pass_track);
         ImageView previousSong = findViewById(R.id.back_track);

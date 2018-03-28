@@ -2,14 +2,11 @@
     <string name="app_name">MusicPlayer</string>
     <string name="add_music">Add music:</string>
     <string name="populate_playlist">Add Music</string>
-    <string name="player_title">Now Playing</string>
+    <string name="playlist">Playlist</string>
+    <string name="now_playing">Now Playing</string>
     <string name="select_artist">Select Artist</string>
     <string name="select_genre">Select Genre</string>
     <string name="select_album">Select Album</string>
     <string name="genre">Genre</string>
     <string name="album">Album</string>
-    <string name="separator"> - </string>
-    <string name="separators"> -- </string>
-    <string name="artist1">Tiesto</string>
-    <string name="artist2">Armin Van Buuren</string>
 </resources>
